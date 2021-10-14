@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import './my-element.ts';
+import './slick-menu-item.ts';
 
 export default {
     title: 'SlickMenuItem',
