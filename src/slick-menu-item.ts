@@ -10,17 +10,17 @@ import { customElement, property } from 'lit/decorators.js'
 @customElement('slick-menu-item')
 export class SlickMenuItem extends LitElement {
   static styles = css`
-    button {
+    li {
       display: flex;
       border: none;
       background: inherit;
       color: currentcolor;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       height: 35px;
     }
     
-    button > * {
+    li > * {
       padding: 5px;
       font-size: 18px;
     }
@@ -50,32 +50,29 @@ export class SlickMenuItem extends LitElement {
   @property()
   background = '#f97316'
 
-  colorInversion(e: any) {
-    e.currentTarget.setAttribute('style', `background: ${this.color}; color: ${this.background};`)
+  _colorInversion(e: any) {
+    e.currentTarget.setAttribute('style', `background-color: ${this.color}; color: ${this.background};`)
   }
 
-  backToNormal(e: any) {
-    e.currentTarget.setAttribute('style', `background: ${this.background}; color: ${this.color};`)
+  _backToNormal(e: any) {
+    e.currentTarget.setAttribute('style', `background-color: ${this.background}; color: ${this.color};`)
   }
 
-  emitEvent() {
-    console.log('slick-menu-item-clicked emitted !!')
-    dispatchEvent(new Event('slick-menu-item-clicked'));
+  _emitEvent() {
+    console.debug('slick-menu-item-clicked intern click')
+    this.dispatchEvent(new Event('slick-menu-item-clicked'));
   }
 
   render() {
     return html`
       <li
-          style="color: ${this.color};"
-          @mouseover="${this.colorInversion}"
-          @mouseout="${this.backToNormal}"
+        style="color: ${this.color};background-color: ${this.background};"
+        @mouseover="${this._colorInversion}"
+        @mouseout="${this._backToNormal}"
+        @click="${this._emitEvent}"
       >
-        <button
-            @click="${this.emitEvent}"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="${ this.icon }"></path></svg>
-          <span class="link_name">${ this.title }</span>
-        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="${ this.icon }"></path></svg>
+        <span class="link_name">${ this.title }</span>
       </li>
     `
   }

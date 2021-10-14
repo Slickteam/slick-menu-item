@@ -1,11 +1,11 @@
 {
   "name": "slick-menu-item",
-  "version": "0.0.0",
-  "main": "dist/my-element.es.js",
+  "version": "0.0.1",
+  "main": "dist/slick-menu-item.es.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/slick-menu-item.es.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/slick-menu-item.d.ts",
   "files": [
     "dist",
     "types"
