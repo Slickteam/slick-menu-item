@@ -1,6 +1,6 @@
 {
-  "name": "slick-menu-item",
-  "version": "0.0.1",
+  "name": "@slickteam/slick-menu-item",
+  "version": "0.0.1-1",
   "main": "dist/slick-menu-item.es.js",
   "exports": {
     ".": "./dist/slick-menu-item.es.js"
@@ -28,5 +28,21 @@
     "babel-loader": "^8.2.2",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
-  }
+  },
+  "description": "a menu item for slick-side-menu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slickteam/slick-menu-item.git"
+  },
+  "keywords": [
+    "menu",
+    "item",
+    "slickteam"
+  ],
+  "author": "Le Visage Théo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Slickteam/slick-menu-item/issues"
+  },
+  "homepage": "https://github.com/Slickteam/slick-menu-item#readme"
 }

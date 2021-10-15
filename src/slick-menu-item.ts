@@ -13,6 +13,7 @@ export class SlickMenuItem extends LitElement {
     li {
       display: flex;
       border: none;
+      border-radius: 5px;
       background: inherit;
       color: currentcolor;
       justify-content: start;
@@ -59,7 +60,6 @@ export class SlickMenuItem extends LitElement {
   }
 
   _emitEvent() {
-    console.debug('slick-menu-item-clicked intern click')
     this.dispatchEvent(new Event('slick-menu-item-clicked'));
   }
 
