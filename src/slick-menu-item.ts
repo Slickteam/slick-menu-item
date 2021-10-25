@@ -22,6 +22,7 @@ export class SlickMenuItem extends LitElement {
       line-height: 40px;
       padding: 6px 12px;
       margin: 0 3px 5px;
+      transition: all 0.1s ease;
     }
     
     li:hover {
@@ -31,7 +32,6 @@ export class SlickMenuItem extends LitElement {
     li > * {
       padding: 5px;
       font-size: 18px;
-      transition: all 0.2s ease;
     }
   `
 
