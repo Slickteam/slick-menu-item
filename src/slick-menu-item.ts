@@ -18,12 +18,20 @@ export class SlickMenuItem extends LitElement {
       color: currentcolor;
       justify-content: start;
       align-items: center;
-      height: 35px;
+      height: 40px;
+      line-height: 40px;
+      padding: 6px 12px;
+      margin: 0 3px 5px;
+    }
+    
+    li:hover {
+      cursor: pointer;
     }
     
     li > * {
       padding: 5px;
       font-size: 18px;
+      transition: all 0.2s ease;
     }
   `
 

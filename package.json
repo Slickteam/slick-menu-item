@@ -1,6 +1,6 @@
 {
   "name": "@slickteam/slick-menu-item",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "main": "dist/slick-menu-item.es.js",
   "exports": {
     ".": "./dist/slick-menu-item.es.js"
